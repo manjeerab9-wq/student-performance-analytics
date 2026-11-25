@@ -26,7 +26,11 @@ student-performance-analytics/
 ├── data/
 │   └── student_performance.csv
 ├── outputs/
-│   └── .gitkeep
+│   ├── student_results.csv
+│   ├── subject_summary.csv
+│   ├── grade_summary.csv
+│   ├── subject_averages.png
+│   └── study_hours_vs_score.png
 ├── src/
 │   └── analyze.py
 ├── requirements.txt
@@ -72,6 +76,40 @@ python src/analyze.py
 
 The script prints key findings in the terminal and saves its reports and charts in the `outputs/` folder.
 
+## Visualizations
+
+### Study Hours vs Average Score
+
+This scatter plot shows a positive relationship in the sample dataset: students with more daily study hours generally have higher average scores.
+
+![Study Hours vs Average Score](outputs/study_hours_vs_score.png)
+
+### Average Score by Subject
+
+This bar chart compares the average marks across Mathematics, Science, and English.
+
+![Average Score by Subject](outputs/subject_averages.png)
+
+## Sample analysis results
+
+Based on the included 20-row sample dataset:
+
+| Metric | Result |
+|---|---:|
+| Number of students | 20 |
+| Class average | 81.30 |
+| Average attendance | 83.85% |
+| Top student | S007 |
+| Top student's average | 96.00 |
+
+Average score by subject:
+
+| Subject | Average score |
+|---|---:|
+| Mathematics | 80.55 |
+| Science | 81.90 |
+| English | 81.45 |
+
 ## Dataset description
 
 The sample dataset includes:
@@ -86,7 +124,7 @@ The sample dataset includes:
 | science_score | Science score |
 | english_score | English score |
 
-## Outputs
+## Generated reports
 
 After running the script, the `outputs/` folder contains:
 
